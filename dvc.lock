@@ -1,4 +1,4 @@
-schema: '2.1'
+schema: '2.0'
 stages:
   get_data:
     cmd: python get_data.py
