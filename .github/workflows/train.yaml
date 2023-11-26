@@ -23,8 +23,10 @@ jobs:
           pip install -r requirements.txt
           dvc repro
           
+          # Report metrics
           git fetch --prune
-          dvc metrics diff --show-md main > report.md
+          # dvc metrics diff --show-md main > report.md
+          dvc metrics diff main --show-md >> report.md
 
 
           # Add figure to reports
