@@ -19,6 +19,8 @@ jobs:
         env:
             REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          python -m venv tutorial-env
+          tutorial-env\Scripts\activate
           # Your ML workflow goes here
           pip install -r requirements.txt
           dvc repro
